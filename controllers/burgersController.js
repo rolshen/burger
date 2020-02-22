@@ -2,15 +2,23 @@ const express = require("express");
 const router = express.Router(); 
 const burger = require("../models/burgerModel.js");
 
+// router.get("/", function(req, res) {
+//     console.log("Route Path");
+//     burger.selectAll((data) => {
+//       handlebarsObject = {
+//         burger: data
+//       };
+//       console.log("Diplayed Burgers");
+//       res.render("index", handlebarsObject);
+//     });
+
+// });
+
 router.get("/", function(req, res) {
     console.log("Route Path");
-    burger.selectAll((data) => {
-      handlebarsObject = {
-        burger: data
-      };
-      console.log("Diplayed Burgers");
-      res.render("index", handlebarsObject);
-    });
+  
+    console.log("Diplayed Burgers");
+    res.send("display burger");
 
 });
 
