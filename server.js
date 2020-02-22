@@ -5,11 +5,11 @@ const bodyParser = require("body-parser");
 const app = express();
 
 var port = process.env.PORT || 8060;
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static("public"));
 
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.set("view engine", "handlebars");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 // const routes = require("./controllers/burgersController.js");
 // app.use("/", routes);
